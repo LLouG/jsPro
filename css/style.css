@@ -3,5 +3,86 @@
 *::before {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+}
+
+body {
+    background: #101218;
+    color: #FFF;
+    height: 100vh;
+    font-family: sans-serif;
+    font-size: 21px;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    justify-content: flex-end;
+    gap: 1em;
+    height: 10vh;
+    margin: 1em 1em 1em auto;
+
+    a {
+        color: inherit;
+    }
+}
+
+.hero {
+    height: 90vh;
+
+    input,
+    .hero__btn {
+        margin-bottom: 2em;
+    }
+
+    h1 {
+        font-size: 4em;
+        margin-bottom: .5em;
+        text-align: center;
+        letter-spacing: .3ch;
+    }
+
+    input {
+        background: #3F4454;
+        border: 1px solid #3A3A3A;
+        border-radius: 100px;
+        padding: 1em 2em;
+        width: 100%;
+    }
+
+    .hero__btn {
+        display: inline-block;
+        width: 100%;
+        justify-items: space-between;
+        text-align: center;
+    }
+
+    .btn {
+        background: hsl(226, 14%, 29%);
+        border-radius: .25em;
+        color: #FFF;
+        padding: .5em;
+        width: 100%;
+    }
+
+    input:hover,
+    input:focus,
+    .btn:hover,
+    .btn:focus {
+        background: hsla(226, 14%, 29%, .8);
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
+.link {
+    text-decoration: none;
 }
