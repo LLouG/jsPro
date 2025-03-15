@@ -8,7 +8,6 @@
 body {
     background: #101218;
     color: #FFF;
-    height: 100vh;
     font-family: sans-serif;
     font-size: 21px;
 }
@@ -26,7 +25,8 @@ nav {
     justify-content: flex-end;
     gap: 1em;
     height: 10vh;
-    margin: 1em 1em 1em auto;
+    padding: 1em;
+    margin-left: auto;
 
     a {
         color: inherit;
@@ -35,6 +35,7 @@ nav {
 
 .hero {
     height: 90vh;
+    align-items: center;
 
     input,
     .hero__btn {
@@ -78,6 +79,7 @@ nav {
         background: hsla(226, 14%, 29%, .8);
     }
 
+
     p {
         text-align: center;
     }
@@ -85,4 +87,8 @@ nav {
 
 .link {
     text-decoration: none;
+}
+
+p .link:active {
+    color: #FFF;
 }
