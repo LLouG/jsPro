@@ -60,7 +60,6 @@ nav {
     .hero__btn {
         display: inline-block;
         width: 100%;
-        justify-items: space-between;
         text-align: center;
     }
 
