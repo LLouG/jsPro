@@ -57,7 +57,7 @@ const haejoon = new SayHello("Haejoon");
 console.log(haejoon.returnHello());
 haejoon.startDay(); */
 
-function GroceryItem(name, quantity) {
+/* function GroceryItem(name, quantity) {
   this.name = name;
   this.quantity = quantity;
 
@@ -90,4 +90,64 @@ function GroceryList() {
 const myList = new GroceryList();
 myList.addItem("Bananas", 5);
 myList.addItem("Apples", 3);
-myList.displayItems();
+myList.displayItems(); */
+
+/* function makeFunctions() {
+  let privateNum = 0;
+
+  function privateIncrement() {
+    privateNum++;
+  }
+
+  return {
+    logNum: () => console.log(privateNum),
+    increment: () => {
+      privateIncrement();
+      console.log("Incremented");
+    },
+  };
+}
+
+const { logNum, increment } = makeFunctions();
+logNum();
+increment();
+logNum(); */
+
+function BankAccount(initialBalance) {
+  let balance = initialBalance;
+
+  const isValidAmount = function (amount) {
+    return typeof amount === "number" && amount > 0;
+  };
+
+  this.deposit = function (amount) {
+    if (isValidAmount(amount)) {
+      balance += amount;
+      console.log(`Deposited $${amount}`);
+    } else {
+      console.log("Invalid deposit amount.");
+    }
+  };
+
+  this.withdraw = function (amount) {
+    if (isValidAmount(amount)) {
+      if (amount <= balance) {
+        balance -= amount;
+        console.log(`$${amount} was withdrawn.`);
+      } else {
+        console.log("Insuficient funds.");
+      }
+    } else {
+      console.log("Invalid withdraw amount.");
+    }
+  };
+
+  this.getBalance = () => {
+    return balance;
+  };
+}
+
+const myAccount = new BankAccount(100);
+myAccount.deposit(50);
+myAccount.withdraw(30);
+console.log(myAccount.getBalance());
